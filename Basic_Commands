@@ -1,0 +1,30 @@
+Below are several commands that can be useful for starting with Docker:
+
+1. docker version - Gives the current version of Docker installed on the System, and other details about both client as well as the server
+2. Install-Module DockerCompletion -Scope CurrentUser - Installs the Docker Auto - completion Module in the Current User as Scope
+3. Import-Module DockerCompletion - Imports the Module installed above for use
+4. Get-Module -ListAvailable DockerCompletion - Checks whether DockerCompletion Module has been installed
+5. docker info - Displays wide info regarding Docker installation like kernel version, number of containers and images etc
+6. docker - Displays a wide variety of option, commands and management commands available under Docker
+7. docker container run --publish 80:80 nginx - Creates and publishes a new container by copying Nginx image from its default repository: Docker hub, 
+   where the first port is the port in the Docker host, and the second is mapped to the port exposed in the container
+8. docker container ls - Shows running containers
+9. docker container ls -a - Shows all containers
+10. docker stop d52b000bbaea - Stops the running container 
+11. docker container rm d52b000bbaea - Removes the container with the given ID
+12. docker container run --publish 4000:80 --detach nginx - Runs the new instance of the image as a container in the background of the terminal
+13. docker container run --publish 4000:80 --detach --name webhost niginx - Creates the container with given name
+14. docker container logs webhost - Displays logs of the container with the given name
+15. docker container top webhost - Lists running processes in the specified container
+16. docker container rm -f e4f - Forcefully remove (without stopping it) the running container whose ID begins with "e4f"
+17. docker container stop webhost - Stops the running container with the name "webhost"
+18. docker start mongo - Starts the container with fiven instructions
+19. docker container run -d --name db -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql - Create the container and set the env variable, 
+    generates a random password that can be accessed through the logs of that container
+20. curl localhost - Displays info about localhost (default port: 80) like Status Code, ContentLength etc
+21. curl http://192.168.99.100:8080 - Displays the above info for the port 8080
+22. docker image ls - Lists the images in the local repository
+23. docker container inspect mysql - Shows metadata about the container with the name "mysql", like startup config, volumes etc
+24. docker container stats - Shows live performance data for all containers
+25. docker container run -it --name proxy nginx bash - -it keeps session open to receive terminal input, and bash if running with -it gives a terminal inside the running container
+25.1 ls -al - When executed in the terminal provided by above bash shell, it gives a full listing of the current path in the file system inside the container 
