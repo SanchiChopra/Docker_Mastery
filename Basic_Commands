@@ -34,3 +34,5 @@ Below are several commands that can be useful for starting with Docker:
 29. apt-get install -y curl - Installs curl on Ubuntu
 30. curl google.com - Using curl as we would on a local machine
 31. exit - Exits the terminal and stops this running container, so Ubuntu container won't show up in docker container ls now
+32. docker container start -ai ubuntu - Starts an already existing container Ubuntu (this willl have curl installed since we installed it earlier under this container)
+33. docker container exec -it mysql bash - Run additional process in running container mysql, and the process is bash terminal
