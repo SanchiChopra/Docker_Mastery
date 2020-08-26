@@ -28,3 +28,9 @@ Below are several commands that can be useful for starting with Docker:
 24. docker container stats - Shows live performance data for all containers
 25. docker container run -it --name proxy nginx bash - -it keeps session open to receive terminal input, and bash if running with -it gives a terminal inside the running container
 25.1 ls -al - When executed in the terminal provided by above bash shell, it gives a full listing of the current path in the file system inside the container 
+26. exit - To exit the above bash terminal
+27. docker container run -it --name ubuntu ubuntu - Ubuntu's default CMD is bash, so we dont have to specify it
+28. apt-get update - Uses apt-get package manager to download package info from all configured sources
+29. apt-get install -y curl - Installs curl on Ubuntu
+30. curl google.com - Using curl as we would on a local machine
+31. exit - Exits the terminal and stops this running container, so Ubuntu container won't show up in docker container ls now
