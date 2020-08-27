@@ -36,3 +36,6 @@ Below are several commands that can be useful for starting with Docker:
 31. exit - Exits the terminal and stops this running container, so Ubuntu container won't show up in docker container ls now
 32. docker container start -ai ubuntu - Starts an already existing container Ubuntu (this willl have curl installed since we installed it earlier under this container)
 33. docker container exec -it mysql bash - Run additional process in running container mysql, and the process is bash terminal
+34. docker pull alpine - Pulls alpine image and it will now appear under images shown by docker image ls
+35. docker container run -it alpine sh - Alpine is small enough to not have bash, but it does have sh
+36. apk - Inside sh of alpine, we can use apk which is the packet manager of alpine to install bash etc
