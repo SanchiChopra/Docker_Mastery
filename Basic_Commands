@@ -39,3 +39,10 @@ Below are several commands that can be useful for starting with Docker:
 34. docker pull alpine - Pulls alpine image and it will now appear under images shown by docker image ls
 35. docker container run -it alpine sh - Alpine is small enough to not have bash, but it does have sh
 36. apk - Inside sh of alpine, we can use apk which is the packet manager of alpine to install bash etc
+37. docker container port webhost - Displays the client and server ports
+38. docker container inspect --format "{{ .NetworkSettings.IPAddress }}" webhost - Formats the output of commands using Go Templates
+39. docker network ls - Show networks
+40. docker network inspect - Inspect a network
+41. docker network create --driver - Create a network
+42. docker network connect - Attach a network to container
+43. docker network disconnect - Detach a network from container
