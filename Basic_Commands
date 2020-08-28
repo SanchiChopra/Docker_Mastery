@@ -63,3 +63,8 @@ Below are several commands that can be useful for starting with Docker:
     (Docker defaults the hostname to the container's name, but we can set aliases too)
     
 44. docker container exec -it my_nginx ping mew_nginx - Sets up DNS resolution between 2 containers for them to talk
+45. docker container run --rm -it centos:7 bash - For running CentOS
+46. docker container run --rm -it ubuntu:14.04 bash - For running Ubuntu
+47. apt-get update && apt-get install -y curl - Installing curl in ubuntu terminal window
+48. yum update curl - Installing curl in CentOS terminal window
+49. curl --version - To know the version of curl installed, be it in CentOS or Ubuntu
