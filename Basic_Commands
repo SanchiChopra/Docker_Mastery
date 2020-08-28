@@ -68,3 +68,11 @@ Below are several commands that can be useful for starting with Docker:
 47. apt-get update && apt-get install -y curl - Installing curl in ubuntu terminal window
 48. yum update curl - Installing curl in CentOS terminal window
 49. curl --version - To know the version of curl installed, be it in CentOS or Ubuntu
+
+LAUNCHING 2 CONTAINERS WITH SAME DNS NAME (DNS ROUND ROBIN TEST):
+
+50. docker network create dudee - Create a network with default bridge driver
+51. docker container run -d --net dudee --net-alias search elasticsearch:2 - Create 1st container linked to the above network
+52. docker container run -d --net dudee --net-alias search elasticsearch:2 - Create the 2nd container
+
+
