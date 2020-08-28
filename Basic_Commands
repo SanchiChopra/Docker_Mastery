@@ -1,5 +1,7 @@
 Below are several commands that can be useful for starting with Docker:
 
+(Upto Section 3 under Docker Mastery)
+
 1. docker version - Gives the current version of Docker installed on the System, and other details about both client as well as the server
 2. Install-Module DockerCompletion -Scope CurrentUser - Installs the Docker Auto - completion Module in the Current User as Scope
 3. Import-Module DockerCompletion - Imports the Module installed above for use
@@ -74,5 +76,7 @@ LAUNCHING 2 CONTAINERS WITH SAME DNS NAME (DNS ROUND ROBIN TEST):
 50. docker network create dudee - Create a network with default bridge driver
 51. docker container run -d --net dudee --net-alias search elasticsearch:2 - Create 1st container linked to the above network
 52. docker container run -d --net dudee --net-alias search elasticsearch:2 - Create the 2nd container
+53. docker container run --rm --net dudee alpine nslookup search - Runs NS lookup command on the search DNS entry, returns as many DNS entries as there are containers present
+54. docker container run --rm --net dudee centos curl -s search:9200 - Gets the Elasticsearch server names Interloper, on running it again we can get the other server names Mr. M randomly
 
 
